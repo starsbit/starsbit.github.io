@@ -4,11 +4,14 @@ import {
   RouteConfigLoadStart,
   Router,
 } from '@angular/router';
+import { fader } from 'src/app/animations/fade-animation';
+import { slider } from 'src/app/animations/slide-in-animation';
 
 @Component({
   selector: 'app-unkown',
   templateUrl: './unkown.component.html',
   styleUrls: ['./unkown.component.sass'],
+  animations: [slider, fader],
 })
 export class UnkownComponent {
   loadingRouteConfig = true;
@@ -26,6 +29,6 @@ export class UnkownComponent {
   }
 
   onCountDownFinished() {
-    // this.router.navigate(['/home']);
+    this.router.navigate(['/home']);
   }
 }
