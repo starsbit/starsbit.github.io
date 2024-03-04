@@ -1,0 +1,9 @@
+<div class="menu">
+  <button
+    *ngFor="let item of menuItems"
+    class="menu-item"
+    (click)="this.onClick($event, item)"
+  >
+    {{ item }}
+  </button>
+</div>

@@ -1,15 +1,12 @@
 <div class="container">
+  <app-stars-background [moveStars]="true"></app-stars-background>
   <img src="../../../assets/starsbit_logo_white.png" class="logo" />
-  <div class="stars-wrapper">
-    <span class="word">
-      <span class="letter">s</span>
-      <span class="letter">t</span>
-      <span class="letter">a</span>
-      <span class="letter">r</span>
-      <span class="letter">s</span>
-      <span class="letter">b</span>
-      <span class="letter">i</span>
-      <span class="letter">t</span>
-    </span>
-  </div>
+  <app-countdown
+    [duration]="5000"
+    [label]="'Coming soon'"
+    [showMovingDots]="true"
+    [color]="'white'"
+    [displaySeconds]="false"
+    class="loading-countdown"
+  ></app-countdown>
 </div>

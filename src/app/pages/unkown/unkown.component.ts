@@ -16,6 +16,10 @@ import { slider } from 'src/app/animations/slide-in-animation';
 export class UnkownComponent {
   loadingRouteConfig = true;
 
+  menuItems = ['Start', 'About', 'Quit'];
+
+  readonly _aboutUrl = 'https://github.com/starsbit/starsbit.github.io';
+
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -30,5 +34,18 @@ export class UnkownComponent {
 
   onCountDownFinished() {
     this.router.navigate(['/home']);
+  }
+
+  onMenuItemClick(event: any, item: string) {
+    if (item === 'Start') {
+      this.router.navigate(['/home']);
+    }
+    if (item === 'About') {
+      console.log(this._aboutUrl);
+      window.open(this._aboutUrl, '_blank');
+    }
+    if (item === 'Quit') {
+      window.close();
+    }
   }
 }

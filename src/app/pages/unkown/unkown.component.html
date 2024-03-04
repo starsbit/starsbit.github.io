@@ -1,18 +1,12 @@
-<div class="stars"></div>
-<div class="twinkling"></div>
 <div class="logo-container">
+  <app-stars-background></app-stars-background>
   <img
     src="../../../assets/starsbit_logo_white.png"
     alt="starsbit"
     class="loading-logo"
   />
-  <app-countdown
-    (countdownFinished)="onCountDownFinished()"
-    [duration]="5000"
-    [label]="'loading'"
-    [showMovingDots]="true"
-    [color]="'white'"
-    [displaySeconds]="false"
-    class="loading-countdown"
-  ></app-countdown>
+  <app-menu-selection
+    [menuItems]="menuItems"
+    [onClick]="onMenuItemClick.bind(this)"
+  ></app-menu-selection>
 </div>
