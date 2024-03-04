@@ -5,9 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-prod": "ng build --base-href https://starsbit.github.io/ --configuration production",
+    "build-prod": "ng build --base-href /starsbit.github.io/ --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npx angular-cli-ghpages --dir=dist/starsbit"
   },
   "private": true,
   "dependencies": {
